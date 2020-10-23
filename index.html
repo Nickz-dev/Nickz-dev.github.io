@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .card{
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 100%;
+        }
+        .showcase {
+            width: 100%;
+            padding-bottom: 8px;
+        }
+        #cats {
+            display: none;
+            width: 100%;
+        }
+        #cats_logo {
+            width: 250px;
+            height: 250px;
+        }
+        .card-body {
+            width: 100%;
+            min-height: 250px;
+            padding: 0;
+            margin: 0 auto;
+        }
+    </style>
+    <title>Generator_cats</title>
+
+</head>
+
+<body class = "bg-light">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="card bg-light text-black-50 mt-2 p-2 " >
+                <h1>Generator cats</h1>
+                <p>Press the button and get a random cats</p>
+                <div id="cats_logo" class="card-body">
+                    <img src="https://www.pngitem.com/pimgs/m/128-1280162_github-logo-png-cat-transparent-png.png" alt="logo">
+
+                </div>
+                <div id="cats" class="card-body">
+
+                </div>
+                <button type="button" class="btn btn-dark" id="btnCats">Summon the cat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let cats = document.querySelector('#cats')
+    let cats_logo = document.querySelector('#cats_logo')
+    let btnCats = document.querySelector('#btnCats')
+    btnCats.addEventListener('click', getFactFetch)
+
+    function getFactFetch() {
+        fetch('https://api.thecatapi.com/v1/images/search')
+            .then((response) => response.json())
+        .then((data) => {
+            cats_logo.style.display = 'none'
+            cats.style.display = 'block'
+            let catsImgUrl = data[0].url
+            let catsImgEl = document.createElement('img')
+            catsImgEl.setAttribute('src', `${catsImgUrl}`)
+            catsImgEl.classList.add("showcase")
+            cats.appendChild(catsImgEl)
+
+        })
+        .catch(err => console.log(err))
+    }
+
+</script>
+</body>
+</html>
