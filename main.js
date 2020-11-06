@@ -1,3 +1,4 @@
+
 //Movement Animation to happen
 const card = document.querySelector(".card_2");
 const container = document.querySelector(".container");
@@ -93,6 +94,7 @@ class TypeWriter {
         setTimeout(() => this.type(), typeSpeed);
     }
 }
+
 
 // Init On DOM Load
 document.addEventListener('DOMContentLoaded', init)

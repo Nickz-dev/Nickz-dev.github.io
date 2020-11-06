@@ -10,13 +10,53 @@
     <title>Nikita Zhmura</title>
 </head>
 <body>
+<div class="modal fade bd-example-modal-lg" id="exampleModal_1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <a href="#"  data-dismiss="modal" >
+                <img src="img/nik_.png"  data-dismiss="modal"  alt="Responsive image"> </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="exampleModal_2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <a href="#"  data-dismiss="modal" >
+                <img src="img/2_.png"  data-dismiss="modal"  alt="Responsive image"> </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg "  id="exampleModal_3"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <a href="#"  data-dismiss="modal">
+                <img src="img/3_.png"  data-dismiss="modal"  alt="Responsive image"> </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade bd-example-modal-lg "  id="exampleModal_6"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <a href="#"  data-dismiss="modal">
+                <img src="img/6_.png"  data-dismiss="modal"  alt="Responsive image"> </a>
+        </div>
+    </div>
+</div>
+
+
 <div class="container">
     <div class="row">
         <div class="media">
             <div class="img"></div>
             <img src="img/ava.png" class="mr-3" alt="Ava"></div>
         <div class="media-body">
-            <h2 class="mt-0"><b>Nikita Zhmura </b> </h2>
+            <h2 class="mt-0"><b>Nikita Zhmura </b></h2>
             <h2>
                     <span class="txt-type" data-wait="3000"
                           data-words='["Приветствую тебя !", "Я full stack developer", "Design, frontend, backend", "Пол: Муж , Возраст 35 лет , Рост 184 см Вес 80 кг...", "Рад тебя увидеть снова..."]'></span>
@@ -24,6 +64,9 @@
         </div>
     </div>
     <div class="col-md-12 mx-auto">
+
+
+        <!-- Modal -->
         <div class="card bg-light text-black-50 mt-2 p-2 ">
             <div class="card_2 bg-light text-black-50 mt-2 p-2" id="card_2">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -32,34 +75,49 @@
                         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/nik.png" class="d-block w-100 " alt="...">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal_1">
+                                <img src="img/nik.png" class="d-block w-100 " alt="..."> </a>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Sankt Petersburg </h5>
                                 <p>2018</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/2.png" class="d-block w-100" alt="...">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal_2">
+                                <img src="img/2.png" class="d-block w-100" alt="..."></a>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>A day ago</h5>
                                 <p>Дома не !Photoshop фотообои на стене в кабинете.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/3.png" class="d-block w-100" alt="...">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal_3">
+                                <img src="img/3.png" class="d-block w-100" alt="..."></a>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Sankt Petersburg</h5>
                                 <p>Финский залив 2016 год.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/4.png" class="d-block w-100" alt="...">
+                            <a href="video/tik_tok.mp4">
+                                <img src="img/4.png" class="d-block w-100" alt="..."> </a>
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Мое самое любимое место.</h5>
-                                <p>Машина моя бавшая.</p>
+                                <h5>Мое самое любимое место и моя машина.</h5>
+                                <p>НАЖАТЬ ЧТО БЫ ПОСМОРЕТЬ ВИДЕО</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal_6">
+                                <img src="img/6.png" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Я не умею улыбаться</h5>
+                                <p>Улыбнись хотя бы ты..</p>
                             </div>
                         </div>
                     </div>
@@ -79,12 +137,14 @@
 
             </div>
             <button type="button" class="btn btn-dark" id="btnCats">Лучше смотреть на котика</button>
+
         </div>
         <h6>Love TRANCE music </h6>
         <h6>Nickz 2020@created specifically for youtube chat </h6>
     </div>
 </div>
 </div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

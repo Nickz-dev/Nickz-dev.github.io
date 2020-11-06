@@ -99,7 +99,17 @@ h2 {
     }
     .card_2 {
         width: 100%;
+        min-height: 20vh;
 
+    }
+    .card-body {
+        min-height: 10vh;
+        width: 45rem;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .cats {
+        min-height: 20vh;
     }
 }
 
@@ -120,7 +130,7 @@ img {
 }
 
 .card-body {
-    min-height: 75vh;
+    min-height: 67vh;
     width: 45rem;
     padding: 0;
     margin: 0 auto;
