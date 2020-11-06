@@ -1,6 +1,3 @@
-$(document).ready(function(){
-    $(".telegram-popup").delay(3000).show(0);
-});
 //Movement Animation to happen
 const card = document.querySelector(".card_2");
 const container = document.querySelector(".container");
