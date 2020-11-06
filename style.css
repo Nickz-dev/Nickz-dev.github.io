@@ -12,6 +12,7 @@ body {
 
 }
 
+
 .container {
     display: flex;
     flex-direction: column;
@@ -21,9 +22,11 @@ body {
     min-width: 400px;
     padding: 0 3rem;
 }
-
+.media {
+    margin-left: 30px;
+}
 .media-body{
-
+    margin-left: 8px;
     margin-right: 45px;
 }
 
@@ -156,4 +159,41 @@ h2 {
 h6 {
     margin-top: 8px;
     text-align: center;
+}
+
+/* переверните сторону при проведении мышью */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 64px;
+    height: 64px;
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+    z-index: 2;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+    transform: rotateY(180deg);
 }
