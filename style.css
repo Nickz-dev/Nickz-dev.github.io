@@ -2,19 +2,108 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    height: 100vh;
     background: #333 url('https://image.ibb.co/n5A2HU/showcase.jpg') no-repeat center center / cover;
     color: #ccc;
-    overflow:hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+
 }
+
+body {
+    margin: 0;
+}
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #000;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    width: 40%;
+    min-width: 400px;
     padding: 0 3rem;
 }
+.media {
+    margin-left: 30px;
+}
+.media-body{
+    margin-left: 8px;
+    margin-right: 45px;
+}
+
 
 h1, h2 {
     font-weight: 200;
@@ -26,8 +115,17 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
-    color: #aaa;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card_2 {
+    transform-style: preserve-3d;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
 /* Cursor */
@@ -35,28 +133,141 @@ h2 {
     border-right: 0.2rem solid #777;
 }
 
-@media(min-width: 1200px) {
+.card-body {
+    min-height: 100vh;
+    width: 45rem;
+    padding: 0;
+    margin: 0 auto;
+}
+@media(max-width: 1400px) {
     h1 {
-        font-size: 5rem;
+        font-size: 2.5rem;
+    }
+    .media {
+        margin-left: 30px;
+    }
+    .media-body{
+
+        margin-right: 20px;
+    }
+    .img {
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    h2 {
+        font-size: 1.2rem;
     }
 }
-
-@media(max-width: 800px) {
-    .container {
-        padding: 0 1rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-}
-
 @media(max-width: 500px) {
     h1 {
         font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
     }
+    .media {
+        margin-left: 30px;
+    }
+    .container {
+        width: 100%;
+    }
+    .card_2 {
+        width: 100%;
+        min-height: 20vh;
+
+    }
+    .card-body {
+        min-height: 10vh;
+        width: 45rem;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .cats {
+        min-height: 20vh;
+    }
+}
+
+.card{
+    display: flex;
+    align-items: center;
+}
+img {
+    width: 100%;
+}
+.showcase {
+    width: 100%;
+    padding-bottom: 8px;
+}
+#cats {
+    display: none;
+    width: 100%;
+}
+
+.card-body {
+    min-height: 67vh;
+    width: 45rem;
+    padding: 0;
+    margin: 0 auto;
+}
+.img {
+    width: 100px;
+}
+.btn {
+    width: 250px;
+    margin: 5px;
+    padding: 1rem 0rem;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bolder;
+
+}
+h2 {
+    text-align: left;
+}
+h6 {
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* переверните сторону при проведении мышью */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 64px;
+    height: 64px;
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+    z-index: 2;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+    transform: rotateY(180deg);
 }
