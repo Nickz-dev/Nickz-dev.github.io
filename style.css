@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background: #333 url('https://image.ibb.co/n5A2HU/showcase.jpg') no-repeat center center / cover;
+    background: #333 url("https://image.ibb.co/n5A2HU/showcase.jpg") no-repeat center center / cover;
     color: #ccc;
     min-height: 100vh;
     display: flex;
@@ -211,6 +211,11 @@ a:hover {
     }
 }
 @media(max-width: 500px) {
+    body {
+        background:none;
+        background-color: #111111;
+        min-height: 100vh;
+    }
     h1 {
         font-size: 2.5rem;
     }
@@ -251,10 +256,6 @@ a:hover {
         font-weight:bold;
         font-size: 16px;
         color: #ffffff;
-    }
-    .animated-word {
-        color: #337ab7;
-        margin-top: 10px;
     }
 }
 
