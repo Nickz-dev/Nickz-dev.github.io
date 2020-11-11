@@ -149,7 +149,7 @@ h2 {
 .animated-word {
     margin-top: 10px;
     text-align: center;
-    color: #999999;
+    color: #777777;
     /*outline: 10px solid;*/
     /*outline-color: rgba(71, 126, 232,0.5);*/
 
@@ -242,18 +242,18 @@ a:hover {
     {
         content: 'Next>';
         font-weight:bold;
-        font-size: 18px;
+        font-size: 16px;
         color: #ffffff;
     }
 
     .carousel-control-prev-icon:after {
         content: '<Back';
         font-weight:bold;
-        font-size: 19px;
+        font-size: 16px;
         color: #ffffff;
     }
     .animated-word {
-        color: white;
+        color: #337ab7;
         margin-top: 10px;
     }
 }
