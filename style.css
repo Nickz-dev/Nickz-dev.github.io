@@ -25,7 +25,7 @@ body {
     right: 0;
     bottom: 0;
     /* фоновый цвет элемента */
-    background: #000;
+    background: #333 url('https://image.ibb.co/n5A2HU/showcase.jpg') no-repeat center center / cover;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
 }
@@ -41,7 +41,31 @@ body {
     text-align: center;
     animation: preloader-rotate 2s infinite linear;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
 
+    background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+    content: 'Next>';
+    font-weight:bold;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<Back';
+    font-weight:bold;
+    font-size: 22px;
+    color: #ffffff;
+}
 .preloader__item {
     position: absolute;
     display: inline-block;
@@ -104,7 +128,9 @@ body {
     margin-right: 45px;
 }
 
-
+a {
+    text-decoration:none;
+}
 h1, h2 {
     font-weight: 200;
     margin: 0.4rem;
@@ -121,7 +147,7 @@ h2 {
 
 
 .animated-word {
-    margin-top: 25px;
+    margin-top: 10px;
     text-align: center;
     color: #333333;
     /*font-weight: 600;*/
@@ -138,7 +164,10 @@ h2 {
 }
 
 
-a:hover {background-position: right center;}
+a:hover {
+    text-decoration:none;
+    background-position: right center;
+}
 
 
 .card_2 {

@@ -14,7 +14,6 @@
 <div class="preloader">
     <div class="preloader__row">
         <div class="preloader__item"></div>
-        <div class="preloader__item"></div>
     </div>
 </div>
 
@@ -49,17 +48,6 @@
     </div>
 </div>
 
-<div class="modal fade bd-example-modal-lg " id="exampleModal_4" tabindex="-1" role="dialog"
-     aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <a href="#" data-dismiss="modal">
-                <div class="embed-responsive embed-responsive-21by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=iZL5USiXXbY" allowfullscreen></iframe>
-                </div>
-        </div>
-    </div>
-</div>
 
 <div class="modal fade bd-example-modal-lg " id="exampleModal_5" tabindex="-1" role="dialog"
      aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -77,14 +65,14 @@
 
             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                 <a href="https://t.me/Nikita_Zhmura" class="telegram-button-link">
-                <div class="flipper">
-                    <div class="front">
-                        <img src="img/ava.png" class="mr-3" alt="Ava">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="img/ava.png" class="mr-3" alt="Ava">
+                        </div>
+                        <div class="back">
+                            <img src="img/ava_t.png" class="mr-3" alt="Ava">
+                        </div>
                     </div>
-                    <div class="back">
-                        <img src="img/ava_t.png" class="mr-3" alt="Ava">
-                    </div>
-                </div>
                 </a>
             </div>
         </div>
@@ -135,14 +123,14 @@
                             </div>
                         </div>
 
-<!--                        <div class="carousel-item">-->
-<!--                            <a href="#" data-toggle="modal" data-target="#exampleModal_5">-->
-<!--                                <img src="img/5.png" class="d-block w-100" alt="..."></a>-->
-<!--                            <div class="carousel-caption d-none d-md-block">-->
-<!--                                <h5>Home</h5>-->
-<!--                                <p>fresh</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <!--                        <div class="carousel-item">-->
+                        <!--                            <a href="#" data-toggle="modal" data-target="#exampleModal_5">-->
+                        <!--                                <img src="img/5.png" class="d-block w-100" alt="..."></a>-->
+                        <!--                            <div class="carousel-caption d-none d-md-block">-->
+                        <!--                                <h5>Home</h5>-->
+                        <!--                                <p>fresh</p>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
 
                         <div class="carousel-item">
                             <a href="video/tik_tok.mp4">
@@ -171,12 +159,29 @@
             </div>
             <button type="button" class="btn btn-dark" id="btnCats">Лучше смотреть на котика</button>
         </div>
+
         <div>
-            <a href="#" data-toggle="modal" data-target="#exampleModal_4">
-            <h6 class="animated-word">Nickz created @2020 + bonus #Track </h6>
+            <a href="https://youtu.be/iZL5USiXXbY">
+                <h6 class="animated-word">Nickz created @2020 + bonus #Track </h6>
             </a>
         </div>
+        <div>
+            <a href="#" data-toggle="modal" data-target="#exampleModal_6">
+                <h6 class="animated-word">#on/off music</h6>
+            </a>
 
+        </div>
+        <div class="modal fade bd-example-modal-lg " id="exampleModal_6" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                        <iframe src="https://muztune.net/uploads/music/2020/10/Triticum_Dark_Space.mp3"></iframe>
+
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 
 
@@ -190,5 +195,7 @@
             integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
             crossorigin="anonymous"></script>
     <script src="main.js"></script>
+
+</div>
 </body>
 </html>
