@@ -149,8 +149,8 @@ h2 {
 .animated-word {
     margin-top: 10px;
     text-align: center;
-    color: #333333;
-    /*font-weight: 600;*/
+    color: #999999;
+    font-weight: 600;
     /*outline: 10px solid;*/
     /*outline-color: rgba(71, 126, 232,0.5);*/
 
@@ -238,6 +238,24 @@ a:hover {
     }
     .cats {
         min-height: 20vh;
+    }
+    .carousel-control-next-icon:after
+    {
+        content: 'Next>';
+        font-weight:bold;
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: '<Back';
+        font-weight:bold;
+        font-size: 19px;
+        color: #ffffff;
+    }
+    .animated-word {
+        color: white;
+        margin-top: 10px;
     }
 }
 
