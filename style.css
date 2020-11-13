@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,100,400');
 
+
 body {
     font-family: 'Raleway', sans-serif;
-    background: #333 url("https://image.ibb.co/n5A2HU/showcase.jpg") no-repeat center center / cover;
+    background: #333 url('https://img.freepik.com/free-photo/abstract-blur-defocused-restaurant-coffee-shop-cafe-interior_1203-9267.jpg?size=626&ext=jpg') no-repeat center center / cover;
     color: #ccc;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     perspective: 1000px;
-
-}
-
-body {
     margin: 0;
+
 }
 
 .preloader {
@@ -25,7 +23,7 @@ body {
     right: 0;
     bottom: 0;
     /* фоновый цвет элемента */
-    background: #333 url('https://image.ibb.co/n5A2HU/showcase.jpg') no-repeat center center / cover;
+    background: #333 url('img/bg.png') no-repeat center center / cover;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
 }
@@ -54,14 +52,14 @@ body {
 
 .carousel-control-next-icon:after
 {
-    content: 'Next>';
+    content: 'Next';
     font-weight:bold;
     font-size: 22px;
     color: #ffffff;
 }
 
 .carousel-control-prev-icon:after {
-    content: '<Back';
+    content: 'Back';
     font-weight:bold;
     font-size: 22px;
     color: #ffffff;
@@ -124,8 +122,10 @@ body {
     margin-left: 30px;
 }
 .media-body{
-    margin-left: 8px;
-    margin-right: 45px;
+    margin-right: 30px;
+
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+
 }
 
 a {
@@ -142,14 +142,14 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    color: #fff;
+    color:brown;
 }
 
 
 .animated-word {
     margin-top: 10px;
     text-align: center;
-    color: #777777;
+    color: brown;
     /*outline: 10px solid;*/
     /*outline-color: rgba(71, 126, 232,0.5);*/
 
@@ -157,7 +157,7 @@ h2 {
 }
 
 .animated-word:hover {
-    color: rgba(71, 126, 232, 0.7);
+    color: rgba(0, 0, 0, 0.7);
     outline-color: rgba(71, 126, 232, 0);
     outline-offset: 300px;
 }
@@ -174,8 +174,9 @@ a:hover {
     width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
-    padding: 0rem 5rem;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5), 0px 0px 50px rgba(0, 0, 0, 0.5);*/
+
 }
 
 /* Cursor */
@@ -204,7 +205,7 @@ a:hover {
         display: none;
     }
     .container{
-        width: 100%;
+        width: 60%;
     }
     h2 {
         font-size: 1.2rem;
@@ -212,7 +213,7 @@ a:hover {
 }
 @media(max-width: 500px) {
     body {
-        background:none;
+
         background-color: #111111;
         min-height: 100vh;
     }
@@ -226,6 +227,11 @@ a:hover {
     .media {
         margin-left: 30px;
     }
+    .media-body {
+        margin-right: 30px;
+        border-radius: 10px;
+    }
+
     .container {
         width: 100%;
     }
@@ -236,7 +242,7 @@ a:hover {
     }
     .card-body {
         min-height: 10vh;
-        width: 45rem;
+        width: 100%;
         padding: 0;
         margin: 0 auto;
     }
@@ -245,14 +251,14 @@ a:hover {
     }
     .carousel-control-next-icon:after
     {
-        content: 'Next>';
+        content: 'Next';
         font-weight:bold;
         font-size: 16px;
         color: #ffffff;
     }
 
     .carousel-control-prev-icon:after {
-        content: '<Back';
+        content: 'Back';
         font-weight:bold;
         font-size: 16px;
         color: #ffffff;
@@ -262,6 +268,9 @@ a:hover {
 .card{
     display: flex;
     align-items: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+
 }
 img {
     width: 100%;
@@ -284,18 +293,7 @@ img {
 .img {
     width: 100px;
 }
-.btn {
-    width: 250px;
-    margin: 5px;
-    padding: 1rem 0rem;
-    border: none;
-    color: white;
-    font-size: 0.8rem;
-    cursor: pointer;
-    border-radius: 3px;
-    font-weight: bolder;
 
-}
 h2 {
     text-align: left;
 }
@@ -339,4 +337,98 @@ h6 {
 /* обратная, изначально скрытая сторона */
 .back {
     transform: rotateY(180deg);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    transition: all 2.5s ease;
+}
+
+:root{
+    --height: 3em;
+    --bgr: rgb(64, 64, 64);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #000;
+    background: var(--bgr);
+    height: calc(1 * var(--height));
+    width: calc(2 * 0.866 * var(--height));
+    /*box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5), 0px 0px 50px rgba(0, 0, 0, 0.5);*/
+    transition: box-shadow ease 0.2s;
+    z-index: 9;
+}
+
+.btn:after,
+.btn:before{
+    content: '';
+    position: absolute;
+    transition: all ease-in-out 0.35s;
+    top: 0px; left: 0px;
+    height: calc(1 * var(--height));
+    width: calc(2 * 0.866 * var(--height));
+    background: var(--bgr);
+    opacity: 0;
+    z-index: -5;
+}
+
+.btn:hover{
+    transition: box-shadow linear 0.2s;
+    box-shadow: none;
+}
+.btn:after{
+    transform: rotate(60deg) translateX(calc(-2 * var(--height)));
+}
+
+.btn:before{
+    transform: rotate(-60deg) translateX(calc(2 * var(--height)));
+    transition-delay: 0.1s;
+}
+
+.btn:hover:after,
+.btn:hover:before{
+    content: '';
+    position: absolute;
+    top: 0px; left: 0px;
+    transition: all ease-in-out .2s;
+    height: calc(1 * var(--height));
+    width: calc(2 * 0.866 * var(--height));
+    background: var(--bgr);
+    opacity: 1;
+    z-index: -5;
+}
+
+.btn:hover:after{
+    transform: rotate(60deg) translateX(0);
+
+}
+
+.btn:hover:before{
+    transform:  rotateZ(-60deg) translateX(0px);
+    transition-delay: 0.1s;
+}
+
+.btn:active:before,
+.btn:active:after{
+    transform: rotateZ(0deg);
+}
+
+.btn:active:before{
+    transition-delay: .1s;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0px; right: 0px;
+    margin: 3px;
+    font-size: 11px;
+}
+
+a{
+    text-decoration: none;
 }
