@@ -23,7 +23,7 @@ body {
     right: 0;
     bottom: 0;
     /* фоновый цвет элемента */
-    background: #333 url('img/bg.png') no-repeat center center / cover;
+    background: #333 url('https://img.freepik.com/free-photo/abstract-blur-defocused-restaurant-coffee-shop-cafe-interior_1203-9267.jpg?size=626&ext=jpg') no-repeat center center / cover;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
 }
@@ -41,34 +41,18 @@ body {
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    height: 100px;
-    width: 100px;
+    height: 64px;
+    width: 64px;
     outline: black;
     background-size: 100%, 100%;
     border-radius: 50%;
-
-    background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
-    content: 'Next';
-    font-weight:bold;
-    font-size: 22px;
-    color: #ffffff;
-}
-
-.carousel-control-prev-icon:after {
-    content: 'Back';
-    font-weight:bold;
-    font-size: 22px;
-    color: #ffffff;
-}
 .preloader__item {
     position: absolute;
     display: inline-block;
     top: 0;
-    background-color: #337ab7;
+    background-color: brown;
     border-radius: 100%;
     width: 35px;
     height: 35px;
@@ -118,12 +102,17 @@ body {
     min-width: 400px;
     padding: 0 3rem;
 }
+
 .media {
     margin-left: 30px;
 }
 .media-body{
+    margin-bottom: 15px;
+    margin-left: 5px;
     margin-right: 30px;
-
+    border-radius: 5px;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
     /*background-color: rgba(0, 0, 0, 0.5);*/
 
 }
@@ -133,15 +122,15 @@ a {
 }
 h1, h2 {
     font-weight: 200;
-    margin: 0.4rem;
+    margin: 0.3rem;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color:brown;
 }
 
@@ -249,20 +238,6 @@ a:hover {
     .cats {
         min-height: 20vh;
     }
-    .carousel-control-next-icon:after
-    {
-        content: 'Next';
-        font-weight:bold;
-        font-size: 16px;
-        color: #ffffff;
-    }
-
-    .carousel-control-prev-icon:after {
-        content: 'Back';
-        font-weight:bold;
-        font-size: 16px;
-        color: #ffffff;
-    }
 }
 
 .card{
@@ -270,7 +245,7 @@ a:hover {
     align-items: center;
     border: none;
     background-color: rgba(0, 0, 0, 0.5);
-
+    border-radius: 10px;
 }
 img {
     width: 100%;
@@ -356,7 +331,7 @@ h6 {
     margin-bottom: 5px;
     cursor: pointer;
     color: #000;
-    background: var(--bgr);
+    background: brown;
     height: calc(1 * var(--height));
     width: calc(2 * 0.866 * var(--height));
     /*box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5), 0px 0px 50px rgba(0, 0, 0, 0.5);*/
@@ -372,7 +347,7 @@ h6 {
     top: 0px; left: 0px;
     height: calc(1 * var(--height));
     width: calc(2 * 0.866 * var(--height));
-    background: var(--bgr);
+    background: brown;
     opacity: 0;
     z-index: -5;
 }
@@ -398,7 +373,7 @@ h6 {
     transition: all ease-in-out .2s;
     height: calc(1 * var(--height));
     width: calc(2 * 0.866 * var(--height));
-    background: var(--bgr);
+    background: brown;
     opacity: 1;
     z-index: -5;
 }
