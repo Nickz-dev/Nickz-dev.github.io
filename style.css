@@ -107,11 +107,11 @@ body {
     margin-left: 30px;
 }
 .media-body{
-    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-top: 5px;
+    border: brown 1px solid;
     background-color: rgba(255, 255, 255, 0.8);
     /*background-color: rgba(0, 0, 0, 0.5);*/
 
@@ -330,8 +330,8 @@ h6 {
     position: relative;
     margin-bottom: 5px;
     cursor: pointer;
-    color: #000;
-    background: brown;
+    color: brown;
+    background: rgba(255, 255, 255, 0.5);
     height: calc(1 * var(--height));
     width: calc(2 * 0.866 * var(--height));
     /*box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5), 0px 0px 50px rgba(0, 0, 0, 0.5);*/
@@ -347,7 +347,7 @@ h6 {
     top: 0px; left: 0px;
     height: calc(1 * var(--height));
     width: calc(2 * 0.866 * var(--height));
-    background: brown;
+    background: rgba(255, 255, 255, 0.5);
     opacity: 0;
     z-index: -5;
 }
@@ -373,7 +373,7 @@ h6 {
     transition: all ease-in-out .2s;
     height: calc(1 * var(--height));
     width: calc(2 * 0.866 * var(--height));
-    background: brown;
+    background: rgba(255, 255, 255, 0.5);
     opacity: 1;
     z-index: -5;
 }
